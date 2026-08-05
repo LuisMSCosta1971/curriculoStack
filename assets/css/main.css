@@ -3,7 +3,7 @@
 * - CSS principal do projeto
 */
 
-@import url("_variables.css");
+@import url("variables.css");
 
 html {
   font-size: 62.5%;
