@@ -1,0 +1,466 @@
+/*
+* MAIN
+* - CSS principal do projeto
+*/
+
+@import url("_variables.css");
+
+html {
+  font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: var(--background);
+  color: #fff;
+}
+
+/*
+*
+* TIPOGRAFIA
+*
+*/
+
+h1,
+h2 {
+  font-weight: var(--fontWeightBold);
+}
+
+h1 {
+  color: var(--colorH1);
+  font-size: 5.8rem;
+}
+
+h2 {
+  color: var(--colorH2);
+  font-size: 4.8rem;
+}
+
+h3 {
+  color: var(--colorH3);
+  font-weight: var(--fontWeightRegular);
+  font-size: 3.2rem;
+}
+
+h4 {
+  color: var(--colorH4);
+  font-weight: var(--fontWeightMedium);
+  font-size: 2.8rem;
+}
+
+p {
+  color: var(--colorP);
+  font-weight: var(--fontWeightLight);
+  font-size: 1.8rem;
+}
+
+small {
+  color: var(--colorP);
+  font-weight: var(--fontWeightLight);
+  font-size: 1.4rem;
+}
+strong {
+  color: var(--colorP);
+  font-weight: var(--fontWeightRegular);
+  font-size: 1.6rem;
+}
+
+/*afastar as sections em altura*/
+section {
+  margin: 130px 0;
+}
+
+.primaryHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.primaryHeader .columnLeft {
+  width: 20%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+
+.primaryHeader .columnLeft button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.primaryHeader .columnLeft button svg {
+  stroke: var(--colorText);
+}
+
+.primaryHeader .columnRight {
+  width: 80%;
+}
+
+.primaryHeader .columnLeft h2 {
+  font-size: 4rem;
+  font-weight: var(--fontWeightBold);
+}
+
+.primaryHeader .columnRight nav ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 30px;
+}
+
+.primaryHeader .columnRight nav ul li a {
+  font-size: 2rem;
+  color: var(--colorPrimaryMenu);
+  text-decoration: none;
+}
+
+.primaryHeader .columnRight nav ul {
+  list-style: none;
+}
+
+.container {
+  width: 1280px;
+  margin: 0 auto;
+}
+
+/*
+*
+*SECTION BANNER
+*
+*/
+
+.sectionBanner {
+  margin: 10px;
+}
+
+.sectionBanner .avatar {
+  overflow: auto;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  max-width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 24px;
+  width: 100%;
+    background-color: var(--backgroundProjectBox);
+
+}
+
+.sectionBanner h2 {
+  margin-top: 10px;
+  text-align: center;
+}
+.sectionBanner h3 {
+  text-align: center;
+}
+
+.cvp {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.btnPrimary {
+  display: inline-block;
+  border: 2px solid var(--colorH2);
+  padding: 12px 32px;
+  border-radius: 1rem;
+  text-decoration: none;
+  margin: 12px 0 0 0;
+}
+
+/* 
+*
+SECTION STACK 
+* 
+*/
+
+.sectionStack header {
+  text-align: center;
+}
+
+.sectionStack header h2 {
+  margin-bottom: 10px;
+}
+
+.sectionStack header h3 {
+  margin-top: 0;
+}
+
+.sectionStack .stackImagesContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap; /*para forçar a quebra de linha*/
+  column-gap: 100px; /*afastamento lateral entre os icons*/
+  row-gap: 50px; /*afastamento em altura dos icones*/
+  margin-top: 100px; /* afasta os icones da frase tecnologias. baixa os icones*/
+  margin: 100px auto 0 auto; /*margin top, left, bottom, right */
+}
+
+/*<!--os 3 modos abaixo servem para os icones serem substituidos um ao outro quando muda o modo de cor da pagina-->*/
+.imageLight,
+.imageDark {
+  display: none;
+}
+
+html[data-theme="light"] .imageLight {
+  display: inline-block !important;
+}
+
+html[data-theme="dark"] .imageDark {
+  display: inline-block !important;
+}
+
+/*
+*
+*SECTION PROJETOS
+*
+*/
+.sectionProjects header {
+  text-align: center;
+}
+
+.sectionProjects header h2 {
+  margin-bottom: 10px;
+}
+
+.sectionProjects header h3 {
+  margin-top: 0;
+}
+
+.sectionProjects .projectsContainer {
+  max-width: 1280px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  column-gap: 77px; /*afastamento lateral entre os icons*/
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /*para forçar a quebra de linha*/
+  row-gap: 70px; /*afastamento em altura dos icones*/
+  margin-top: 100px;
+}
+.sectionProjects .projectsContainer .projectBox {
+  max-width: 375px;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden; /*isto permite o border passar para a frente da imagem*/
+  box-shadow: rgba(000, 000, 000, 0.2) 0px 8px 24px; /*adquirido no getcssscan.com */
+  background-color: var(--backgroundProjectBox);
+}
+.sectionProjects .projectsContainer .projectBox .projectContent {
+  padding: 30px;
+}
+
+.projectContent h4 {
+  margin: 0;
+  line-height: 2.8rem;
+}
+
+.projectActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+  background-color: var();
+}
+
+.projectActions .linkWithIcon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.projectActions .linkWithIcon a {
+  color: var(--colorAnchor);
+  text-decoration: underline;
+  font-size: 1.6rem;
+  font-weight: var(--fontWeightRegular);
+}
+
+/*abaixo podemos verificar que os dois svg usam caracteristicas diferentes para preenchimento de cor. um usa stroke e outro usa fill */
+.projectActions .linkWithIcon:first-child svg path {
+  stroke: var(--colorAnchor);
+}
+.projectActions .linkWithIcon:last-child svg path {
+  /*neste caso só temos mais um elemento. se tivessemos mais elementos a seguir poderiamos usar .projectActions .linkWithIcon + .linkWWithIcon svg path para selecionar apenas o segundo elemento */
+  fill: var(--colorAnchor);
+}
+
+/*
+*
+*MAIN-FOOTER
+*
+*/
+
+.footerWrapper .mainFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* flex-wrap: wrap; no mobile, se quisermos que a coluna da dta passe para cima em vez de vir para baixo, devemos escolher wrap-reverse*/
+  border-bottom: 2px solid var(--grey03); /*traço abaixo do logo*/
+  height: 100px;
+}
+
+.footerWrapper .mainFooter .mainFooterColumn {
+  display: flex;
+  align-items: center;
+}
+
+.footerWrapper .mainFooter .mainFooterColumn.left {
+  justify-content: flex-start;
+}
+
+.footerWrapper .mainFooter .mainFooterColumn.right {
+  justify-content: flex-end;
+}
+
+.mainFooterColumn.right ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.mainFooterColumn.right a {
+  color: var(--colorP);
+  font-weight: var(--fontWeightLight);
+  font-size: 1.8rem;
+  text-decoration: none;
+}
+
+/*
+*
+*MINI-FOOTER
+*
+*/
+
+.miniFooter {
+  padding: 60px 0;
+}
+
+.miniFooter .columnRight {
+  width: 80%;
+}
+
+.miniFooter nav ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+  padding-left: 0;
+  margin-top: 0; /*isto elimina a margem de classe anterior*/
+}
+
+.miniFooter nav ul li a {
+  font-size: 2rem;
+  color: var(--colorPrimaryMenu);
+  text-decoration: none;
+}
+
+.miniFooter nav ul {
+  list-style: none;
+}
+
+/*
+* PAGES
+*/
+
+.about-page section {
+  width: 100%;
+  max-width: 700px;
+  margin: 30px 0;
+}
+
+.about-page section header h2 {
+  margin-bottom: 10px;
+}
+
+.about-page section.sectionAbout h1 {
+  font-size: 4.2rem;
+  font-weight: var(--fontWeightBold);
+}
+
+/*
+expList
+expListItem
+expFirstLine
+expSecondColumn
+*/
+
+.about-page .expList {
+  color: var(--colorP);
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.about-page .expList .expListItem {
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--colorBorder);
+}
+
+.about-page .expList .expFirstLine {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about-page .expList .expFirstLine h3 {
+  font-size: 2rem;
+  font-weight: var(--fontWeightRegular);
+}
+
+.about-page .expBadge {
+  background-color: var(--green02);
+  color: var(--green01);
+  padding: 7px 15px;
+  border-radius: 100px;
+  cursor: default;
+  font-size: 0.9rem;
+  font-weight: var(--fontWeightMedium);
+}
+
+.about-page .expList .expSecondLine > div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.about-page .expList .expSecondLine {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: var(--fontWeightMedium);
+  color: var(--colorP);
+}
+
+.stack-page .sectionStack header {
+  text-align: left;
+}
+
+.projects-page .sectionProjects header {
+  text-align: left;
+}
+
+.contact-page .sectionContact {
+  margin: 200px 0;
+  text-align: center;
+}
+
+.contact-page .sectionContact h1 {
+  margin-bottom: 0;
+}
+
+.contact-page .sectionContact .contentEmail {
+  background: var(--primaryGradient);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 5.8rem;
+  font-weight: var(--fontWeightBold);
+}
